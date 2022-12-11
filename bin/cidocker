@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+
+use Symfony\Component\Console\Application;
+use Cidocker\Command\CreateComposeCommand;
+$dir = __DIR__.'/..';
+
+if (!file_exists($dir.'/autoload.php')) {
+    $dir = __DIR__.'/../vendor';
+}
+
+if (!file_exists($dir.'/autoload.php')) {
+    $dir = __DIR__.'/../../..';
+}
+
+if (!file_exists($dir.'/autoload.php')) {
+    echo 'Autoload not found.';
+    exit(1);
+}
+
+require $dir.'/autoload.php';
+
+// 使用 Symfony 的 Console Object 當進入點
+$application = new Application();
+$application->add(new CreateComposeCommand("ci:create-docker"));
+$application->run();

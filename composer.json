@@ -1,0 +1,23 @@
+{
+    "name": "slps970093/codeigniter-docker",
+    "keywords": ["codeigniter", "docker"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chou Yu-Hsien",
+            "email": "slps970093@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/filesystem": "^3.4.47",
+        "symfony/console": "^3.3.18"
+    },
+    "bin": [
+        "bin/cidocker"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Cidocker\\": "src/"
+        }
+    }
+}
