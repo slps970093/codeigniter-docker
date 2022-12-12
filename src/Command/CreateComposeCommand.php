@@ -28,8 +28,9 @@ class CreateComposeCommand extends Command
 
         $fileSystem = new Filesystem();
 
-        $fileSystem->mirror("./vendor/slps970093/ci-docker/runtimes/ci-{$codeigniterVer}/","./");
+        $fileSystem->mirror("./vendor/slps970093/codeigniter-docker/runtimes/ci-{$codeigniterVer}/","./");
 
         $output->write('success');
     }
+}
 }
