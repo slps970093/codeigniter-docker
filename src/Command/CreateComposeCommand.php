@@ -33,4 +33,3 @@ class CreateComposeCommand extends Command
         $output->write('success');
     }
 }
-}
