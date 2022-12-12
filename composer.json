@@ -19,5 +19,6 @@
         "psr-4": {
             "Cidocker\\": "src/"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
